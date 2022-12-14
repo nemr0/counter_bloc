@@ -8,7 +8,7 @@ class CounterCubit extends Cubit<CounterState> {
 
   /// A static method to get cubit from anywhere in widget tree
   static CounterCubit get(BuildContext context) =>
-      BlocProvider.of<CounterCubit>(context);
+      context.watch<CounterCubit>();
 
   /// the counter itself
   int counter = 0;
